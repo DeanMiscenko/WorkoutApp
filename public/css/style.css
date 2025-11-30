@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  overflow: hidden; /* prevents all scrolling */
+}
+
 @font-face {
     font-family: 'Futura PT Bold';
     font-style: normal;
@@ -5,14 +10,12 @@
     src: local('Futura PT Bold'), url('Fonts/FuturaCyrillicBold.woff') format('woff');
   }
   
-  /* Reset */
   body {
     margin: 0;
     font-family: 'Futura PT Bold';
     background-image: linear-gradient(to right, black, #221c37);
   }
   
-  /* Navbar */
   .header {
     margin: 0;
     width: 100%;
@@ -20,12 +23,12 @@
   
   .navbar {
     display: flex;
-    justify-content: space-between; /* logo left, title middle, links right */
+    justify-content: space-between; 
     align-items: center;
-    background-color: lightgrey;
-    padding: 15px 40px;
+    background-color: white;
+    padding: 5px 40px;
     width: 100%;
-    position: fixed; /* stick to top */
+    position: fixed; 
     top: 0;
     left: 0;
     z-index: 1000;
@@ -35,18 +38,20 @@
   .navbar h2 {
     flex: 1;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 30px;
   }
   
   .logo img {
     max-width: 50px;
     height: auto;
+    margin-left: 20px;
   }
   
   .links {
+    margin-right: 40px;
+    font-size: 20px;
     display: flex;
-    gap: 20px;
-    margin: 0;
+    gap: 50px;
     padding: 0;
   }
   
@@ -58,23 +63,26 @@
   }
   
   .links a:hover {
-    color: #333;
+    color: grey;
   }
   
-  /* Hero Section */
   .hero {
     display: flex;
     justify-content: flex-start; /* align left */
     align-items: center;
     text-align: left;
     min-height: 100vh;
-    padding: 120px 40px 40px; /* top padding for fixed navbar */
+    padding: 50px 40px 40px; /* top padding for fixed navbar */
     box-sizing: border-box;
+    margin-left: 130px;
   }
   
   .hero-content {
-    background: lightgrey;
-    padding: 40px;
+    background: white;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
     border-radius: 15px;
     max-width: 500px; /* medium box */
   }
@@ -88,6 +96,46 @@
     font-size: 1.1rem;
     margin-bottom: 30px;
   }
+
+/* right image container */
+.hero-image {
+  margin-top: 30px;
+  margin-right: 80px;
+  margin-left: auto;              /* pushes it as far right as possible */
+  max-width: 450px;               /* control max size */
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;      /* align image to the right inside this area */
+}
+
+/* actual image */
+.hero-image img {
+  width: 140%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-bottom: 30px;
+  }
+
+  .hero-image {
+    margin-left: 0;
+    justify-content: center;
+    max-width: 300px;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+}
   
   .cta-btn {
     background: black;
@@ -103,7 +151,6 @@
     background: #333;
   }
   
-  /* Login Page Styles */
   .login-container {
     height: 100vh;
     display: flex;
