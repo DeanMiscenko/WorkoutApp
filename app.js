@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // handles registration form
 app.post("/register", (req, res) => {
     const { email, password } = req.body;
-
+    
     if (!email || !password) {
         return res.status(400).send("Please fill in all fields.");
     }

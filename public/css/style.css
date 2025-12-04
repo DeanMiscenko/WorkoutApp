@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  overflow: hidden; /* prevents all scrolling */
 }
 
 @font-face {
@@ -231,3 +230,123 @@ html, body {
     text-decoration: underline;
   }
   
+  .about-page {
+    min-height: 100vh;
+    padding: 120px 40px 60px; /* space for fixed navbar */
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Futura PT Bold';
+  }
+  
+  .about-hero {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  
+  .about_title {
+    text-align: center;
+    margin: 40px auto 15px;
+    color: white;
+    max-width: 400px;
+    font-size: 2rem;
+  }
+  
+  .about_tagline {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #e5e5e5;
+    line-height: 1.6;
+  }
+  
+  .about-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  
+  .about-card {
+    background: rgba(255, 255, 255, 0.92);
+    color: #111827;
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+  }
+  
+  .about-card h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  
+  .about-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .about-card ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .about-footer-cta {
+    max-width: 700px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  
+  .about-footer-cta p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: #f9fafb;
+  }
+  
+  .about-cta-btn {
+    color: black;
+    padding: 5px 13px;
+    background-color: #e5e5e5;
+  }
+  
+  @media (max-width: 900px) {
+    .about-page {
+      padding: 100px 20px 40px;
+    }
+  
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about_title {
+      max-width: 100%;
+      font-size: 1.7rem;
+    }
+  
+    .about_tagline {
+      font-size: 0.95rem;
+    }
+  }
+  .section-divider {
+    width: 90%;
+    height: 3px;
+    background: white;
+    opacity: 0.4;
+    margin: 60px auto;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
