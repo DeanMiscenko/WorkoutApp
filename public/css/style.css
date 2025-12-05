@@ -1,120 +1,333 @@
+/* i forgot why this is here but im scared to remove it now */
+
 html, body {
   height: 100%;
 }
 
+/* FONT & BASE BODY */
 @font-face {
-    font-family: 'Futura PT Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Futura PT Bold'), url('Fonts/FuturaCyrillicBold.woff') format('woff');
-  }
-  
-  body {
-    margin: 0;
-    font-family: 'Futura PT Bold';
-    background-image: linear-gradient(to right, black, #221c37);
-  }
-  
-  .header {
-    margin: 0;
-    width: 100%;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    background-color: white;
-    padding: 5px 40px;
-    width: 100%;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-sizing: border-box;
-  }
+  font-family: 'Futura PT Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Bold'), url('Fonts/FuturaCyrillicBold.woff') format('woff');
+}
 
-  .navbar h2 {
-    flex: 1;
-    text-align: left;
-    margin-left: 30px;
-  }
-  
-  .logo img {
-    max-width: 50px;
-    height: auto;
-    margin-left: 20px;
-  }
-  
-  .links {
-    margin-right: 40px;
-    font-size: 20px;
-    display: flex;
-    gap: 50px;
-    padding: 0;
-  }
-  
-  .links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .links a:hover {
-    color: grey;
-  }
-  
-  .hero {
-    display: flex;
-    justify-content: flex-start; /* align left */
-    align-items: center;
-    text-align: left;
-    min-height: 100vh;
-    padding: 50px 40px 40px; /* top padding for fixed navbar */
-    box-sizing: border-box;
-    margin-left: 130px;
-  }
-  
-  .hero-content {
-    background: white;
-    padding-top: 15px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 15px;
-    max-width: 500px; /* medium box */
-  }
-  
-  .hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-  }
+body {
+  margin: 0;
+  font-family: 'Futura PT Bold';
+  background-image: linear-gradient(to right, black, #221c37);
+}
 
-/* right image container */
+/* HEADER & NAVBAR */
+
+.header {
+  margin: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 5px 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar h2 {
+  flex: 1;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.links {
+  margin-right: 40px;
+  font-size: 20px;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: grey;
+}
+
+/* HERO SECTION */
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  min-height: 100vh;
+  padding: 50px 40px 40px;
+  box-sizing: border-box;
+  margin-left: 130px;
+}
+
+.hero-content {
+  background: white;
+  padding-top: 15px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
 .hero-image {
   margin-top: 30px;
   margin-right: 80px;
-  margin-left: auto;              /* pushes it as far right as possible */
-  max-width: 450px;               /* control max size */
+  margin-left: auto;
+  max-width: 450px;
   flex: 1;
   display: flex;
-  justify-content: flex-end;      /* align image to the right inside this area */
+  justify-content: flex-end;
 }
 
-/* actual image */
 .hero-image img {
   width: 140%;
   height: auto;
   object-fit: contain;
 }
 
-/* responsive */
+/* CTA BUTTONS */
+
+.cta-btn {
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #333;
+}
+
+/* LOGIN PAGE COMPONENTS */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 350px;
+  background: white;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-family: 'Futura PT Bold';
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  text-align: left;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  border: 1.5px solid #d1d1d1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: 0.15s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.login-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #333;
+}
+
+.small-text {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #555;
+}
+
+.small-text a {
+  color: black;
+  text-decoration: none;
+}
+
+.small-text a:hover {
+  text-decoration: underline;
+}
+
+/* ABOUT PAGE */
+
+.about-page {
+  min-height: 100vh;
+  padding: 120px 40px 60px;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Futura PT Bold';
+}
+
+.about-hero {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about_title {
+  text-align: center;
+  margin: 40px auto 15px;
+  color: white;
+  max-width: 400px;
+  font-size: 2rem;
+}
+
+.about_tagline {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #e5e5e5;
+  line-height: 1.6;
+}
+
+.about-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.about-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.about-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-card ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-footer-cta {
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.about-footer-cta p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #f9fafb;
+}
+
+.about-cta-btn {
+  color: black;
+  padding: 5px 13px;
+  background-color: #e5e5e5;
+}
+
+/* DIVIDERS */
+
+.section-divider {
+  width: 90%;
+  height: 3px;
+  background: white;
+  opacity: 0.4;
+  margin: 60px auto;
+}
+
+/* FADE-IN */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* PWA stuff */
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -134,219 +347,296 @@ html, body {
   .hero-image img {
     width: 100%;
   }
-}
-  
-  .cta-btn {
-    background: black;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-btn:hover {
-    background: #333;
-  }
-  
-  .login-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-card {
-    width: 350px;
-    background: white;
-    padding: 35px 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    text-align: center;
-  }
-  
-  .login-title {
-    font-size: 28px;
-    margin-bottom: 25px;
-    font-family: 'Futura PT Bold';
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .login-form label {
-    text-align: left;
-    font-size: 14px;
-    margin-left: 4px;
-  }
-  
-  .login-form input {
-    padding: 10px 12px;
-    border: 1.5px solid #d1d1d1;
-    border-radius: 8px;
-    font-size: 14px;
-    font-family: inherit;
-    transition: 0.15s;
-  }
-  
-  .login-form input:focus {
-    outline: none;
-    border-color: black;
-  }
-  
-  .login-btn {
-    margin-top: 10px;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: black;
-    color: white;
-    font-size: 16px;
-    font-family: inherit;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-  
-  .login-btn:hover {
-    background: #333;
-  }
-  
-  .small-text {
-    margin-top: 15px;
-    font-size: 13px;
-    color: #555;
-  }
-  
-  .small-text a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .small-text a:hover {
-    text-decoration: underline;
-  }
-  
+
   .about-page {
-    min-height: 100vh;
-    padding: 120px 40px 60px; /* space for fixed navbar */
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Futura PT Bold';
+    padding: 100px 20px 40px;
   }
-  
-  .about-hero {
-    max-width: 700px;
-    margin: 0 auto 50px;
-    text-align: center;
-  }
-  
-  .about_title {
-    text-align: center;
-    margin: 40px auto 15px;
-    color: white;
-    max-width: 400px;
-    font-size: 2rem;
-  }
-  
-  .about_tagline {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1rem;
-    color: #e5e5e5;
-    line-height: 1.6;
-  }
-  
+
   .about-grid {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+    grid-template-columns: 1fr;
   }
-  
-  .about-card {
-    background: rgba(255, 255, 255, 0.92);
-    color: #111827;
-    border-radius: 16px;
-    padding: 22px 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    box-sizing: border-box;
+
+  .about_title {
+    max-width: 100%;
+    font-size: 1.7rem;
   }
-  
-  .about-card h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.1rem;
-  }
-  
-  .about-card p {
-    margin: 0;
+
+  .about_tagline {
     font-size: 0.95rem;
-    line-height: 1.6;
   }
-  
-  .about-card ul {
-    margin: 0;
-    padding-left: 18px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-  
-  .about-footer-cta {
-    max-width: 700px;
-    margin: 40px auto 0;
-    text-align: center;
-  }
-  
-  .about-footer-cta p {
-    margin-bottom: 16px;
-    font-size: 1rem;
-    color: #f9fafb;
-  }
-  
-  .about-cta-btn {
-    color: black;
-    padding: 5px 13px;
-    background-color: #e5e5e5;
-  }
-  
-  @media (max-width: 900px) {
-    .about-page {
-      padding: 100px 20px 40px;
-    }
-  
-    .about-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .about_title {
-      max-width: 100%;
-      font-size: 1.7rem;
-    }
-  
-    .about_tagline {
-      font-size: 0.95rem;
-    }
-  }
-  .section-divider {
-    width: 90%;
-    height: 3px;
-    background: white;
-    opacity: 0.4;
-    margin: 60px auto;
 }
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+/* ACCOUNT DASHBOARD PAGE */
+
+.account-page {
+  min-height: 100vh;
+  padding: 120px 40px 60px; /* space for fixed navbar */
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Futura PT Bold';
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0px);
+/* Top card: user info + stats */
+.account-header {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.account-user-card,
+.account-stats-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111827;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+.account-user-card h1 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+}
+
+.account-user-card p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.account-stats-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.account-stats-card .stat {
+  margin-bottom: 12px;
+}
+
+.account-stats-card .stat:last-child {
+  margin-bottom: 0;
+}
+
+.account-title {
+  margin: 0 0 6px;
+  font-size: 1.6rem;
+}
+
+.account-name {
+  color: #111827;
+}
+
+.account-email span,
+.account-meta span {
+  font-weight: 600;
+}
+
+.account-email,
+.account-meta {
+  margin: 2px 0;
+  font-size: 0.95rem;
+}
+
+.enter-details-btn a {
+  margin: 2px 0;
+  display: inline-block;
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.enter-details-btn a:hover {
+  background: #333;
+}
+
+.placeholder-text {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Quick stats row */
+.account-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.stat {
+  min-width: 130px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f3f4f6;
+  text-align: left;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Main grid: recent activity + calendar */
+.account-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+/* Card base */
+.account-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111827;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+.account-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Recent activity list */
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(209,213,219,0.7);
+}
+
+.activity-list li:last-child {
+  border-bottom: none;
+}
+
+.activity-title {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.activity-meta {
+  display: block;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+/* Calendar styling */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.calendar-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.calendar-month-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.calendar {
+  margin-top: 8px;
+}
+
+.calendar-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.calendar-days span {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.calendar-cell {
+  height: 32px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+
+.calendar-cell.empty {
+  background: transparent;
+}
+
+.calendar-cell.tracked {
+  background: #111827;
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+/* Legend */
+.calendar-legend {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #4b5563;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #f3f4f6;
+}
+
+.legend-dot.tracked {
+  background: #111827;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .account-page {
+    padding: 100px 20px 40px;
+  }
+
+  .account-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .account-stats {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
 }
