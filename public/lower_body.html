@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Lower Body Exercises</title>
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="LiftOff logo"/>
+                </div>
+                <h2>LiftOff!</h2>
+                <div class="nav-search">
+                    <input id="exercise-search" type="text" placeholder="Search exercises">
+                </div>
+                <div class="links">
+                    <nav><a href="index.html">Home</a></nav>
+                    <nav><a href="account.html">Account</a></nav>
+                    <nav><a href="log_activity.html">Log activity</a></nav>
+                    <nav><a href="login.html">Logout</a></nav>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="exercise-page">
+        <section class="exercise-header-row fade-in">
+            <h1>Lower body exercises</h1>
+            <p>Filter by body part below, or search for a specific exercise in the navbar.</p>
+        </section>
+
+        <section class="bodypart-filters fade-in">
+            <button class="body-filter-btn active" data-filter="all">All</button>
+            <button class="body-filter-btn" data-filter="glutes">Glutes</button>
+            <button class="body-filter-btn" data-filter="quads">Quads</button>
+            <button class="body-filter-btn" data-filter="hamstrings">Hamstrings</button>
+            <button class="body-filter-btn" data-filter="calves">Calves</button>
+        </section>
+
+        <section class="exercise-grid fade-in">
+            <article class="exercise-card" data-name="Hip Thrust" data-bodypart="glutes">
+                <h3>Hip thrust</h3>
+                <span class="exercise-tag">Glutes</span>
+                <p>Horizontal hip extension focusing on glute strength and lockout power.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Glute Bridge" data-bodypart="glutes">
+                <h3>Glute bridge</h3>
+                <span class="exercise-tag">Glutes</span>
+                <p>Bodyweight or loaded bridge for glutes and posterior chain activation.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Back Squat" data-bodypart="quads">
+                <h3>Back squat</h3>
+                <span class="exercise-tag">Quads</span>
+                <p>Compound squat variation targeting quads, glutes and overall leg strength.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Leg Press" data-bodypart="quads">
+                <h3>Leg press</h3>
+                <span class="exercise-tag">Quads</span>
+                <p>Machine-based pressing movement to load quads with added stability.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Romanian Deadlift" data-bodypart="hamstrings">
+                <h3>Romanian deadlift</h3>
+                <span class="exercise-tag">Hamstrings</span>
+                <p>Hip hinge emphasizing hamstrings and glutes with minimal knee bend.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Lying Leg Curl" data-bodypart="hamstrings">
+                <h3>Lying leg curl</h3>
+                <span class="exercise-tag">Hamstrings</span>
+                <p>Machine curl targeting knee flexion strength in the hamstrings.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Standing Calf Raise" data-bodypart="calves">
+                <h3>Standing calf raise</h3>
+                <span class="exercise-tag">Calves</span>
+                <p>Straight-leg calf raise focusing on gastrocnemius.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Seated Calf Raise" data-bodypart="calves">
+                <h3>Seated calf raise</h3>
+                <span class="exercise-tag">Calves</span>
+                <p>Bent-knee calf raise emphasizing soleus and calf endurance.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/fade.js"></script>
+    <script src="/js/exercise_search.js"></script>
+</body>
+</html>

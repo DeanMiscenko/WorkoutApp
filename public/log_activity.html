@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Log Activity</title>
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="LiftOff logo"/>
+                </div>
+                <h2>LiftOff!</h2>
+                <div class="nav-search">
+                    <input id="exercise-search" type="text" placeholder="Search exercises">
+                </div>
+                <div class="links">
+                    <nav><a href="index.html">Home</a></nav>
+                    <nav><a href="account.html">Account</a></nav>
+                    <nav><a href="log_activity.html">Log activity</a></nav>
+                    <nav><a href="login.html">Logout</a></nav>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="exercise-page fade-in">
+        <section class="exercise-hero">
+            <h1>Log your workout</h1>
+            <p>Choose a body area to browse exercises, or search directly using the bar above.</p>
+        </section>
+
+        <section class="exercise-category-grid">
+            <a href="upper_body.html" class="category-card">
+                <h2>Upper body</h2>
+                <p>Back, shoulders, arms, chest and more.</p>
+            </a>
+            <a href="core.html" class="category-card">
+                <h2>Core</h2>
+                <p>Abs, obliques and full-core stability work.</p>
+            </a>
+            <a href="lower_body.html" class="category-card">
+                <h2>Lower body</h2>
+                <p>Glutes, quads, hamstrings and calves.</p>
+            </a>
+        </section>
+    </main>
+
+    <script src="/js/fade.js"></script>
+    <script src="/js/exercise_search.js"></script>
+</body>
+</html>

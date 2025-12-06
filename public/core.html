@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Core Exercises</title>
+    <link rel="manifest" href="manifest.json"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="LiftOff logo"/>
+                </div>
+                <h2>LiftOff!</h2>
+                <div class="nav-search">
+                    <input id="exercise-search" type="text" placeholder="Search exercises">
+                </div>
+                <div class="links">
+                    <nav><a href="index.html">Home</a></nav>
+                    <nav><a href="account.html">Account</a></nav>
+                    <nav><a href="log_activity.html">Log activity</a></nav>
+                    <nav><a href="login.html">Logout</a></nav>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="exercise-page">
+        <section class="exercise-header-row fade-in">
+            <h1>Core exercises</h1>
+            <p>Scroll through or search for a specific core movement above.</p>
+        </section>
+
+        <section class="exercise-grid fade-in">
+            <article class="exercise-card" data-name="Plank" data-bodypart="core">
+                <h3>Plank</h3>
+                <span class="exercise-tag">Core</span>
+                <p>Isometric hold in a straight line, training bracing and overall core stability.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Side Plank" data-bodypart="core">
+                <h3>Side plank</h3>
+                <span class="exercise-tag">Core</span>
+                <p>Side-on hold emphasizing obliques and lateral hip stability.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Hanging Leg Raise" data-bodypart="core">
+                <h3>Hanging leg raise</h3>
+                <span class="exercise-tag">Core</span>
+                <p>Hanging hip flexion for lower abs and grip strength.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Dead Bug" data-bodypart="core">
+                <h3>Dead bug</h3>
+                <span class="exercise-tag">Core</span>
+                <p>Slow, controlled contralateral limb movement while maintaining a braced trunk.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Cable Woodchop" data-bodypart="core">
+                <h3>Cable woodchop</h3>
+                <span class="exercise-tag">Core</span>
+                <p>Rotational movement training obliques and anti-rotation control.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+
+            <article class="exercise-card" data-name="Ab Wheel Rollout" data-bodypart="core">
+                <h3>Ab wheel rollout</h3>
+                <span class="exercise-tag">Core</span>
+                <p>Dynamic anti-extension drill challenging the entire anterior core.</p>
+                <div class="exercise-image-placeholder"></div>
+            </article>
+        </section>
+    </main>
+
+    <script src="/js/fade.js"></script>
+    <script src="/js/exercise_search.js"></script>
+</body>
+</html>
