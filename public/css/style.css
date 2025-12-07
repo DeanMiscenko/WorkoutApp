@@ -1,5 +1,8 @@
-/* i forgot why this is here but im scared to remove it now */
+/* GLOBAL STYLES */
 
+button {
+  font-family: 'Futura PT Bold';
+}
 html, body {
   height: 100%;
 }
@@ -17,7 +20,39 @@ body {
   margin: 0;
   font-family: 'Futura PT Bold';
   background-image: linear-gradient(to right, black, #221c37);
+  color: white;
 }
+
+body.light-mode {
+  background-image: none;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+body.font-scale-0 {
+  font-size: 100%;
+}
+
+body.font-scale-1 {
+  font-size: 112%;
+}
+
+body.font-scale-2 {
+  font-size: 125%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 
 /* HEADER & NAVBAR */
 
@@ -44,6 +79,7 @@ body {
   flex: 1;
   text-align: left;
   margin-left: 30px;
+  color: black;
 }
 
 .logo img {
@@ -69,6 +105,60 @@ body {
 
 .links a:hover {
   color: grey;
+}
+
+/* ACCESSIBILITY */
+
+#content-scale-wrapper {
+  transform-origin: top center;
+  transition: transform 0.25s ease;
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+.scale-110 {
+  transform: scale(1.10);
+}
+
+.scale-125 {
+  transform: scale(1.25);
+}
+
+.scale-140 {
+  transform: scale(1.40);
+}
+
+.scale-155 {
+  transform: scale(1.55);
+}
+
+.accessibility-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 20px;
+}
+
+.accessibility-controls button {
+  border: none;
+  background: #e5e7eb;
+  color: #111827;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+body.light-mode .accessibility-controls button {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.accessibility-controls button:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
 }
 
 /* HERO SECTION */
@@ -158,6 +248,7 @@ body {
   font-size: 28px;
   margin-bottom: 25px;
   font-family: 'Futura PT Bold';
+  color: black;
 }
 
 .login-form {

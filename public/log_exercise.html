@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self';"/>
     <link rel="stylesheet" href="css/style.css"/>
-    <title>Lower Body Exercises</title>
+    <title>Log Exercise</title>
     <link rel="manifest" href="manifest.json"/>
     <link rel="icon" type="image/x-icon" href="images/favicon.png"/>
 </head>
@@ -18,14 +18,14 @@
                     <img src="images/logo.png" alt="LiftOff logo"/>
                 </div>
                 <h2>LiftOff!</h2>
-                <div class="nav-search">
-                    <input id="exercise-search" type="text" placeholder="Search exercises">
-                </div>
                 <div class="accessibility-controls" aria-label="Display settings">
                     <button id="font-decrease" type="button" aria-label="Decrease text size">A-</button>
                     <button id="font-reset" type="button" aria-label="Reset text size">A</button>
                     <button id="font-increase" type="button" aria-label="Increase text size">A+</button>
                     <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">Toggle Light/Dark Mode</button>
+                </div>
+                <div class="nav-search">
+                    <input id="exercise-search" type="text" placeholder="Search exercises">
                 </div>
                 <div class="links">
                     <nav><a href="index.html">Home</a></nav>
@@ -37,26 +37,30 @@
         </header>
     </div>
     <div id="content-scale-wrapper">
-        <main class="exercise-page" data-region="lower">
-            <section class="exercise-header-row fade-in">
-                <h1>Lower body exercises</h1>
-                <p>Filter by body part below, or search for a specific exercise in the navbar.</p>
+        <main class="details-page">
+            <section class="details-card fade-in">
+                <h1 class="details-title" id="exercise-title">Log exercise</h1>
+                <p class="details-subtitle" id="exercise-subtitle"></p>
+
+                <form class="details-form" action="/log-exercise" method="POST">
+                    <input type="hidden" name="exercise_id" id="exercise-id">
+
+                    <label for="weight">Weight (kg)</label>
+                    <input id="weight" name="weight" type="number" step="0.5" min="0" placeholder="e.g. 60">
+
+                    <label for="sets">Sets</label>
+                    <input id="sets" name="sets" type="number" min="1" placeholder="e.g. 4">
+
+                    <label for="reps_per_set">Reps per set</label>
+                    <input id="reps_per_set" name="reps_per_set" type="number" min="1" placeholder="e.g. 10">
+
+                    <button type="submit" class="login-btn details-submit">Save activity</button>
+                </form>
             </section>
-        
-            <section class="bodypart-filters fade-in">
-                <button class="body-filter-btn active" data-filter="all">All</button>
-                <button class="body-filter-btn" data-filter="glutes">Glutes</button>
-                <button class="body-filter-btn" data-filter="quads">Quads</button>
-                <button class="body-filter-btn" data-filter="hamstrings">Hamstrings</button>
-                <button class="body-filter-btn" data-filter="calves">Calves</button>
-            </section>
-        
-            <section class="exercise-grid fade-in" id="exercise-grid"></section>
         </main>
     </div>
     <script src="/js/fade.js"></script>
-    <script src="/js/exercise_search.js"></script>
-    <script src="/js/exercise_page.js"></script>
+    <script src="/js/log_exercise.js"></script>
     <script src="/js/accessibility.js"></script>
 </body>
 </html>

@@ -18,6 +18,12 @@
                     <img src="images/logo.png" alt="LiftOff logo"/>
                 </div>
                 <h2>LiftOff!</h2>
+                <div class="accessibility-controls" aria-label="Display settings">
+                    <button id="font-decrease" type="button" aria-label="Decrease text size">A-</button>
+                    <button id="font-reset" type="button" aria-label="Reset text size">A</button>
+                    <button id="font-increase" type="button" aria-label="Increase text size">A+</button>
+                    <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">Toggle Light/Dark Mode</button>
+                </div>
                 <div class="links">
                     <nav><a href="index.html">Home</a></nav>
                     <nav><a href="account.html">Account</a></nav>
@@ -27,33 +33,34 @@
             </div>
         </header>
     </div>
+    <div id="content-scale-wrapper">
+        <main class="details-page">
+            <section class="details-card fade-in">
+                <h1 class="details-title">Log your details</h1>
+                <p class="details-subtitle">Update your profile so your dashboard reflects your real goals and progress.</p>
 
-    <main class="details-page">
-        <section class="details-card fade-in">
-            <h1 class="details-title">Log your details</h1>
-            <p class="details-subtitle">Update your profile so your dashboard reflects your real goals and progress.</p>
+                <form class="details-form" action="/details" method="POST">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Your display name" required>
 
-            <form class="details-form" action="/details" method="POST">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" placeholder="Your display name" required>
+                    <label for="goal">Goal</label>
+                    <input id="goal" name="goal" type="text" placeholder="Build strength, lose fat, etc." required>
 
-                <label for="goal">Goal</label>
-                <input id="goal" name="goal" type="text" placeholder="Build strength, lose fat, etc." required>
+                    <label for="weight">Current weight (kg)</label>
+                    <input id="weight" name="weight" type="number" step="0.1" min="0" placeholder="e.g. 68.5" required>
 
-                <label for="weight">Current weight (kg)</label>
-                <input id="weight" name="weight" type="number" step="0.1" min="0" placeholder="e.g. 68.5" required>
+                    <label for="weight_goal">Weight goal (kg)</label>
+                    <input id="weight_goal" name="weight_goal" type="number" step="0.1" min="0" placeholder="e.g. 62.0" required>
 
-                <label for="weight_goal">Weight goal (kg)</label>
-                <input id="weight_goal" name="weight_goal" type="number" step="0.1" min="0" placeholder="e.g. 62.0" required>
+                    <label for="height">Height (cm)</label>
+                    <input id="height" name="height" type="number" step="0.1" min="0" placeholder="e.g. 175" required>
 
-                <label for="height">Height (cm)</label>
-                <input id="height" name="height" type="number" step="0.1" min="0" placeholder="e.g. 175" required>
-
-                <button type="submit" class="login-btn details-submit">Save details</button>
-            </form>
-        </section>
-    </main>
-
+                    <button type="submit" class="login-btn details-submit">Save details</button>
+                </form>
+            </section>
+        </main>
+    </div>
     <script src="/js/fade.js"></script>
+    <script src="/js/accessibility.js"></script>
 </body>
 </html>

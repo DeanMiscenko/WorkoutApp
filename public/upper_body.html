@@ -21,6 +21,12 @@
                 <div class="nav-search">
                     <input id="exercise-search" type="text" placeholder="Search exercises">
                 </div>
+                <div class="accessibility-controls" aria-label="Display settings">
+                    <button id="font-decrease" type="button" aria-label="Decrease text size">A-</button>
+                    <button id="font-reset" type="button" aria-label="Reset text size">A</button>
+                    <button id="font-increase" type="button" aria-label="Increase text size">A+</button>
+                    <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">Toggle Light/Dark Mode</button>
+                </div>
                 <div class="links">
                     <nav><a href="index.html">Home</a></nav>
                     <nav><a href="account.html">Account</a></nav>
@@ -30,111 +36,29 @@
             </div>
         </header>
     </div>
-
-    <main class="exercise-page">
-        <section class="exercise-header-row fade-in">
-            <h1>Upper body exercises</h1>
-            <p>Filter by body part below, or search for a specific exercise in the navbar.</p>
-        </section>
-
-        <section class="bodypart-filters fade-in">
-            <button class="body-filter-btn active" data-filter="all">All</button>
-            <button class="body-filter-btn" data-filter="back">Back</button>
-            <button class="body-filter-btn" data-filter="shoulders">Shoulders</button>
-            <button class="body-filter-btn" data-filter="biceps">Biceps</button>
-            <button class="body-filter-btn" data-filter="triceps">Triceps</button>
-            <button class="body-filter-btn" data-filter="forearms">Forearms</button>
-            <button class="body-filter-btn" data-filter="chest">Chest</button>
-        </section>
-
-        <section class="exercise-grid fade-in">
-            <article class="exercise-card" data-name="Pull-up" data-bodypart="back">
-                <h3>Pull-up</h3>
-                <span class="exercise-tag">Back</span>
-                <p>Vertical pulling movement targeting lats, upper back and biceps. Can be done bodyweight or assisted.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Barbell Row" data-bodypart="back">
-                <h3>Barbell row</h3>
-                <span class="exercise-tag">Back</span>
-                <p>Hip-hinged horizontal row focusing on mid-back and lats, with some posterior-chain stability.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Face Pull" data-bodypart="shoulders">
-                <h3>Face pull</h3>
-                <span class="exercise-tag">Shoulders</span>
-                <p>Cable or band pull to the face that strengthens rear delts and external rotators.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Overhead Press" data-bodypart="shoulders">
-                <h3>Overhead press</h3>
-                <span class="exercise-tag">Shoulders</span>
-                <p>Pressing movement overhead, targeting front and side delts and triceps.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Barbell Curl" data-bodypart="biceps">
-                <h3>Barbell curl</h3>
-                <span class="exercise-tag">Biceps</span>
-                <p>Standing curl focusing on elbow flexion and biceps size and strength.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Hammer Curl" data-bodypart="biceps">
-                <h3>Hammer curl</h3>
-                <span class="exercise-tag">Biceps</span>
-                <p>Neutral-grip curl emphasizing brachialis and forearm muscles.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Skullcrusher" data-bodypart="triceps">
-                <h3>Skullcrusher</h3>
-                <span class="exercise-tag">Triceps</span>
-                <p>Lying triceps extension to target long head and overall triceps strength.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Cable Pushdown" data-bodypart="triceps">
-                <h3>Cable pushdown</h3>
-                <span class="exercise-tag">Triceps</span>
-                <p>Cable movement isolating triceps with controlled lockout.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Wrist Curl" data-bodypart="forearms">
-                <h3>Wrist curl</h3>
-                <span class="exercise-tag">Forearms</span>
-                <p>Seated curl variation focusing on wrist flexors and grip endurance.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Reverse Curl" data-bodypart="forearms">
-                <h3>Reverse curl</h3>
-                <span class="exercise-tag">Forearms</span>
-                <p>Overhand grip curl targeting brachioradialis and wrist extensors.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Bench Press" data-bodypart="chest">
-                <h3>Bench press</h3>
-                <span class="exercise-tag">Chest</span>
-                <p>Horizontal press for chest, shoulders and triceps, often used as a strength benchmark.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-
-            <article class="exercise-card" data-name="Incline Dumbbell Press" data-bodypart="chest">
-                <h3>Incline dumbbell press</h3>
-                <span class="exercise-tag">Chest</span>
-                <p>Incline variation emphasizing upper chest and front delts.</p>
-                <div class="exercise-image-placeholder"></div>
-            </article>
-        </section>
-    </main>
-
+    <div id="content-scale-wrapper">
+        <main class="exercise-page" data-region="upper">
+            <section class="exercise-header-row fade-in">
+                <h1>Upper body exercises</h1>
+                <p>Filter by body part below, or search for a specific exercise in the navbar.</p>
+            </section>
+        
+            <section class="bodypart-filters fade-in">
+                <button class="body-filter-btn active" data-filter="all">All</button>
+                <button class="body-filter-btn" data-filter="back">Back</button>
+                <button class="body-filter-btn" data-filter="shoulders">Shoulders</button>
+                <button class="body-filter-btn" data-filter="biceps">Biceps</button>
+                <button class="body-filter-btn" data-filter="triceps">Triceps</button>
+                <button class="body-filter-btn" data-filter="forearms">Forearms</button>
+                <button class="body-filter-btn" data-filter="chest">Chest</button>
+            </section>
+        
+            <section class="exercise-grid fade-in" id="exercise-grid"></section>
+        </main>
+    </div>
     <script src="/js/fade.js"></script>
+    <script src="/js/exercise_page.js"></script>
     <script src="/js/exercise_search.js"></script>
+    <script src="/js/accessibility.js"></script>
 </body>
 </html>

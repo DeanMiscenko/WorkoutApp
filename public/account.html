@@ -19,6 +19,12 @@
                     <img src="images/logo.png" alt="LiftOff logo"/>
                 </div>
                 <h2>LiftOff!</h2>
+                <div class="accessibility-controls" aria-label="Display settings">
+                    <button id="font-decrease" type="button" aria-label="Decrease text size">A-</button>
+                    <button id="font-reset" type="button" aria-label="Reset text size">A</button>
+                    <button id="font-increase" type="button" aria-label="Increase text size">A+</button>
+                    <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">Toggle Light/Dark Mode</button>
+                </div>
                 <div class="links">
                     <nav><a href="index.html">Home</a></nav>
                     <nav><a href="account.html">Account</a></nav>
@@ -27,135 +33,120 @@
             </div>
         </header>
     </div>
-
-    <main class="account-page">
-        <section class="account-header fade-in">
-            <div class="account-user-card">
-                <h1 class="account-title">Welcome back, <span class="account-name" id="user-username" data-placeholder=""></span></h1>
-                <p class="account-email">Email: <span id="user-email">Loading...</span></p>
-                <p class="account-meta">Member since: <span id="user-member-since" data-placeholder="Not entered"></span></p>
-                <p class="account-meta">Goal: <span id="user-goal" data-placeholder="Not entered"></span></p>
-                <p class="account-meta">Weight: <span id="user-weight" data-placeholder="Not entered"></span></p>
-                <p class="account-meta">Weight Goal: <span id="user-weight-goal" data-placeholder="Not entered"></span></p>
-                <p class="account-meta">Height: <span id="user-height" data-placeholder="Not entered"></span></p>
-                <nav class="enter-details-btn"><a href="log_details.html">Enter details</a></nav>
-              </div>
-              
-            
-            <div class="account-stats-card">
-                <div class="stat">
-                    <span class="stat-label">This week</span>
-                    <span class="stat-value">3 workouts</span>
+    <div id="content-scale-wrapper">
+        <main class="account-page">
+            <section class="account-header fade-in">
+                <div class="account-user-card">
+                    <h1 class="account-title">Welcome back, <span class="account-name" id="user-username" data-placeholder=""></span></h1>
+                    <p class="account-email">Email: <span id="user-email">Loading...</span></p>
+                    <p class="account-meta">Member since: <span id="user-member-since" data-placeholder="Not entered"></span></p>
+                    <p class="account-meta">Goal: <span id="user-goal" data-placeholder="Not entered"></span></p>
+                    <p class="account-meta">Weight: <span id="user-weight" data-placeholder="Not entered"></span></p>
+                    <p class="account-meta">Weight Goal: <span id="user-weight-goal" data-placeholder="Not entered"></span></p>
+                    <p class="account-meta">Height: <span id="user-height" data-placeholder="Not entered"></span></p>
+                    <nav class="enter-details-btn"><a href="log_details.html">Enter details</a></nav>
                 </div>
-                <div class="stat">
-                    <span class="stat-label">This month</span>
-                    <span class="stat-value">12 sessions</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">Current streak</span>
-                    <span class="stat-value">4 days</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="account-grid">
-
-            <section class="account-card fade-in">
-                <div class="activity-header">
-                    <h2>Recent Activity</h2>
-                    <a class="enter-details-btn small-btn" href="log_activity.html">Log activity</a>
-                </div>            
-                <ul class="activity-list">
-                    <li>
-                        <span class="activity-title">Push Day (Chest / Triceps)</span>
-                        <span class="activity-meta">Yesterday · 1h 05m</span>
-                    </li>
-                    <li>
-                        <span class="activity-title">Leg Day (Squats / RDLs)</span>
-                        <span class="activity-meta">2 days ago · 55m</span>
-                    </li>
-                    <li>
-                        <span class="activity-title">Pull Day (Back / Biceps)</span>
-                        <span class="activity-meta">4 days ago · 50m</span>
-                    </li>
-                    <li>
-                        <span class="activity-title">Full Body (Light)</span>
-                        <span class="activity-meta">Last week · 45m</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="account-card fade-in">
-                <div class="calendar-header">
-                    <div>
-                        <h2>Workout Calendar</h2>
-                        <p class="calendar-subtitle">Tracked days highlighted</p>
+                
+                
+                <div class="account-stats-card">
+                    <div class="stat">
+                        <span class="stat-label">This week</span>
+                        <span class="stat-value">3 workouts</span>
                     </div>
-                    <div class="calendar-month">
-                        <span class="calendar-month-name">March 2025</span>
+                    <div class="stat">
+                        <span class="stat-label">This month</span>
+                        <span class="stat-value">12 sessions</span>
                     </div>
-                </div>
-
-                <div class="calendar">
-                    <div class="calendar-row calendar-days">
-                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
-                    </div>
-
-                    <div class="calendar-row">
-                        <span class="calendar-cell empty"></span>
-                        <span class="calendar-cell">1</span>
-                        <span class="calendar-cell tracked">2</span>
-                        <span class="calendar-cell">3</span>
-                        <span class="calendar-cell tracked">4</span>
-                        <span class="calendar-cell">5</span>
-                        <span class="calendar-cell">6</span>
-                    </div>
-                    <div class="calendar-row">
-                        <span class="calendar-cell tracked">7</span>
-                        <span class="calendar-cell">8</span>
-                        <span class="calendar-cell">9</span>
-                        <span class="calendar-cell tracked">10</span>
-                        <span class="calendar-cell">11</span>
-                        <span class="calendar-cell">12</span>
-                        <span class="calendar-cell tracked">13</span>
-                    </div>
-                    <div class="calendar-row">
-                        <span class="calendar-cell">14</span>
-                        <span class="calendar-cell">15</span>
-                        <span class="calendar-cell tracked">16</span>
-                        <span class="calendar-cell">17</span>
-                        <span class="calendar-cell">18</span>
-                        <span class="calendar-cell tracked">19</span>
-                        <span class="calendar-cell">20</span>
-                    </div>
-                    <div class="calendar-row">
-                        <span class="calendar-cell tracked">21</span>
-                        <span class="calendar-cell">22</span>
-                        <span class="calendar-cell">23</span>
-                        <span class="calendar-cell tracked">24</span>
-                        <span class="calendar-cell">25</span>
-                        <span class="calendar-cell">26</span>
-                        <span class="calendar-cell tracked">27</span>
-                    </div>
-                    <div class="calendar-row">
-                        <span class="calendar-cell">28</span>
-                        <span class="calendar-cell">29</span>
-                        <span class="calendar-cell">30</span>
-                        <span class="calendar-cell tracked">31</span>
-                        <span class="calendar-cell empty"></span>
-                        <span class="calendar-cell empty"></span>
-                        <span class="calendar-cell empty"></span>
-                    </div>
-
-                    <div class="calendar-legend">
-                        <span class="legend-dot tracked"></span> Workout day
+                    <div class="stat">
+                        <span class="stat-label">Current streak</span>
+                        <span class="stat-value">4 days</span>
                     </div>
                 </div>
             </section>
-        </section>
-    </main>
 
+            <section class="account-grid">
+
+                <section class="account-card fade-in">
+                    <div class="activity-header">
+                        <h2>Recent Activity</h2>
+                        <a class="enter-details-btn small-btn" href="log_activity.html">Log activity</a>
+                    </div>
+                    <ul class="activity-list" id="activity-list"></ul>
+                    <p class="small-text" id="no-activity" style="display:none;">No activity logged yet.</p>
+                </section>            
+
+                <section class="account-card fade-in">
+                    <div class="calendar-header">
+                        <div>
+                            <h2>Workout Calendar</h2>
+                            <p class="calendar-subtitle">Tracked days highlighted</p>
+                        </div>
+                        <div class="calendar-month">
+                            <span class="calendar-month-name">March 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar">
+                        <div class="calendar-row calendar-days">
+                            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                        </div>
+
+                        <div class="calendar-row">
+                            <span class="calendar-cell empty"></span>
+                            <span class="calendar-cell">1</span>
+                            <span class="calendar-cell tracked">2</span>
+                            <span class="calendar-cell">3</span>
+                            <span class="calendar-cell tracked">4</span>
+                            <span class="calendar-cell">5</span>
+                            <span class="calendar-cell">6</span>
+                        </div>
+                        <div class="calendar-row">
+                            <span class="calendar-cell tracked">7</span>
+                            <span class="calendar-cell">8</span>
+                            <span class="calendar-cell">9</span>
+                            <span class="calendar-cell tracked">10</span>
+                            <span class="calendar-cell">11</span>
+                            <span class="calendar-cell">12</span>
+                            <span class="calendar-cell tracked">13</span>
+                        </div>
+                        <div class="calendar-row">
+                            <span class="calendar-cell">14</span>
+                            <span class="calendar-cell">15</span>
+                            <span class="calendar-cell tracked">16</span>
+                            <span class="calendar-cell">17</span>
+                            <span class="calendar-cell">18</span>
+                            <span class="calendar-cell tracked">19</span>
+                            <span class="calendar-cell">20</span>
+                        </div>
+                        <div class="calendar-row">
+                            <span class="calendar-cell tracked">21</span>
+                            <span class="calendar-cell">22</span>
+                            <span class="calendar-cell">23</span>
+                            <span class="calendar-cell tracked">24</span>
+                            <span class="calendar-cell">25</span>
+                            <span class="calendar-cell">26</span>
+                            <span class="calendar-cell tracked">27</span>
+                        </div>
+                        <div class="calendar-row">
+                            <span class="calendar-cell">28</span>
+                            <span class="calendar-cell">29</span>
+                            <span class="calendar-cell">30</span>
+                            <span class="calendar-cell tracked">31</span>
+                            <span class="calendar-cell empty"></span>
+                            <span class="calendar-cell empty"></span>
+                            <span class="calendar-cell empty"></span>
+                        </div>
+
+                        <div class="calendar-legend">
+                            <span class="legend-dot tracked"></span> Workout day
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
     <script src="/js/fade.js"></script>
     <script src="/js/account.js"></script>
+    <script src="/js/accessibility.js"></script>
 </body>
 </html>

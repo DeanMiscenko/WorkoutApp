@@ -21,6 +21,12 @@
                 <div class="nav-search">
                     <input id="exercise-search" type="text" placeholder="Search exercises">
                 </div>
+                <div class="accessibility-controls" aria-label="Display settings">
+                    <button id="font-decrease" type="button" aria-label="Decrease text size">A-</button>
+                    <button id="font-reset" type="button" aria-label="Reset text size">A</button>
+                    <button id="font-increase" type="button" aria-label="Increase text size">A+</button>
+                    <button id="theme-toggle" type="button" aria-pressed="false" aria-label="Toggle light and dark mode">Toggle Light/Dark Mode/button>
+                </div>
                 <div class="links">
                     <nav><a href="index.html">Home</a></nav>
                     <nav><a href="account.html">Account</a></nav>
@@ -30,30 +36,32 @@
             </div>
         </header>
     </div>
+    <div id="content-scale-wrapper">
+        <main class="exercise-page fade-in">
+            <section class="exercise-hero">
+                <h1>Log your workout</h1>
+                <p>Choose a body area to browse exercises, or search directly using the bar above.</p>
+            </section>
 
-    <main class="exercise-page fade-in">
-        <section class="exercise-hero">
-            <h1>Log your workout</h1>
-            <p>Choose a body area to browse exercises, or search directly using the bar above.</p>
-        </section>
-
-        <section class="exercise-category-grid">
-            <a href="upper_body.html" class="category-card">
-                <h2>Upper body</h2>
-                <p>Back, shoulders, arms, chest and more.</p>
-            </a>
-            <a href="core.html" class="category-card">
-                <h2>Core</h2>
-                <p>Abs, obliques and full-core stability work.</p>
-            </a>
-            <a href="lower_body.html" class="category-card">
-                <h2>Lower body</h2>
-                <p>Glutes, quads, hamstrings and calves.</p>
-            </a>
-        </section>
-    </main>
+            <section class="exercise-category-grid">
+                <a href="upper_body.html" class="category-card">
+                    <h2>Upper body</h2>
+                    <p>Back, shoulders, arms, chest and more.</p>
+                </a>
+                <a href="core.html" class="category-card">
+                    <h2>Core</h2>
+                    <p>Abs, obliques and full-core stability work.</p>
+                </a>
+                <a href="lower_body.html" class="category-card">
+                    <h2>Lower body</h2>
+                    <p>Glutes, quads, hamstrings and calves.</p>
+                </a>
+            </section>
+        </main>
+    </div>
 
     <script src="/js/fade.js"></script>
     <script src="/js/exercise_search.js"></script>
+    <script src="/js/accessibility.js"></script>
 </body>
 </html>

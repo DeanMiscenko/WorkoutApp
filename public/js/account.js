@@ -1,3 +1,55 @@
+function loadRecentActivity() {
+  const list = document.getElementById("activity-list");
+  const emptyMsg = document.getElementById("no-activity");
+  if (!list) return;
+
+  fetch("/api/recent-activity")
+    .then(res => {
+      if (res.status === 401) {
+        if (emptyMsg) {
+          emptyMsg.style.display = "block";
+          emptyMsg.textContent = "Log in to see your activity.";
+        }
+        return [];
+      }
+      if (!res.ok) throw new Error("Request failed: " + res.status);
+      return res.json();
+    })
+    .then(rows => {
+      if (!rows || !rows.length) {
+        if (emptyMsg) emptyMsg.style.display = "block";
+        return;
+      }
+      rows.forEach(log => {
+        const li = document.createElement("li");
+        const dateText = String(log.created_at || "").split(" ")[0] || "";
+        const setsText = log.sets != null ? log.sets : "-";
+        const repsText = log.reps_per_set != null ? log.reps_per_set : "-";
+        const weightText = log.weight != null ? log.weight + " kg" : "- kg";
+
+        li.innerHTML =
+          '<span class="activity-title">' + log.name + '</span>' +
+          '<span class="activity-meta">' +
+          dateText +
+          " · " +
+          setsText +
+          " sets x " +
+          repsText +
+          " reps @ " +
+          weightText +
+          "</span>";
+        list.appendChild(li);
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      if (emptyMsg) {
+        emptyMsg.style.display = "block";
+        emptyMsg.textContent = "Error loading activity.";
+      }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   fetch("/api/profile")
     .then(res => {
@@ -51,4 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
       span.classList.add("placeholder-text");
     }
   });
+
+  loadRecentActivity();
 });
