@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnReset = document.getElementById("font-reset");
     const btnInc = document.getElementById("font-increase");
   
-    const scaleClasses = ["scale-100", "scale-110", "scale-125", "scale-150"];
+    const scaleClasses = ["scale-100", "scale-110", "scale-125", "scale-140", "scale-155"];
   
     let theme = localStorage.getItem(THEME_KEY) || "dark";
     let scaleLevel = parseInt(localStorage.getItem(SCALE_KEY) || "0", 10);
@@ -68,4 +68,5 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+  
   

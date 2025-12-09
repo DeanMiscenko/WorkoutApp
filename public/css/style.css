@@ -3,9 +3,95 @@
 button {
   font-family: 'Futura PT Bold';
 }
+
 html, body {
   height: 100%;
 }
+
+body.light-mode .about-hero {
+  color: black;
+}
+
+body.light-mode .navbar {
+  background-color: #ffffff;
+}
+
+body.light-mode .navbar h2 {
+  color: #111827;
+}
+
+body.light-mode .links a {
+  color: #111827;
+}
+
+body.light-mode .links a:hover {
+  color: #4b5563;
+}
+
+body.light-mode .hero-content {
+  background: #ffffff;
+  color: #111827;
+}
+
+body.light-mode .cta-btn {
+  background: #111827;
+  color: #f9fafb;
+}
+
+body.light-mode .cta-btn:hover {
+  background: #4b5563;
+}
+
+/* About page text colours in light mode */
+body.light-mode .about-page {
+  color: #111827;
+}
+
+body.light-mode .about_title {
+  color: #111827;
+}
+
+body.light-mode .about_tagline {
+  color: #4b5563;
+}
+
+body.light-mode .about-footer-cta p {
+  color: #111827;
+}
+
+/* Account page base text */
+body.light-mode .account-page {
+  color: #111827;
+}
+
+/* Darken subtle text for light mode */
+body.light-mode .calendar-subtitle,
+body.light-mode .activity-meta,
+body.light-mode .stat-label {
+  color: #6b7280;
+}
+
+/* Exercise pages */
+body.light-mode .exercise-page {
+  color: #111827;
+}
+
+body.light-mode .exercise-hero p,
+body.light-mode .exercise-header-row p {
+  color: #4b5563;
+}
+
+/* Section divider in light mode */
+body.light-mode .section-divider {
+  background: #d4d4d4;
+  opacity: 1;
+}
+
+/* Details page */
+body.light-mode .details-page {
+  color: #111827;
+}
+
 
 /* FONT & BASE BODY */
 
@@ -139,6 +225,7 @@ body.font-scale-2 {
   align-items: center;
   gap: 6px;
   margin-left: 20px;
+  margin-right: 40px;
 }
 
 .accessibility-controls button {
@@ -182,6 +269,7 @@ body.light-mode .accessibility-controls button {
   padding-right: 40px;
   border-radius: 15px;
   max-width: 500px;
+  color: black;
 }
 
 .hero h1 {
@@ -571,7 +659,7 @@ body.light-mode .accessibility-controls button {
 .stat-label {
   display: block;
   font-size: 0.8rem;
-  color: #6b7280;
+  color: #36454f;
 }
 
 .stat-value {
